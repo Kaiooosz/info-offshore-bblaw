@@ -456,21 +456,26 @@ footer {
   function getEstrutura(p, o) {
     if (p === 'p4') {
       if (o === 'o_sucessao') return { nome: 'Trust Internacional', pais: 'Jersey / Ilhas Cayman', explicacao: 'Para patrimonios desse porte com foco em sucessao, o Trust oferece segregacao patrimonial e transmissao controlada entre geracoes sem inventario no Brasil.' };
-      return { nome: 'Trust ou Fundacao Privada', pais: 'Liechtenstein / Cayman', explicacao: 'Patrimonios acima de R$ 10 milhoes pedem estruturas robustas como Trust ou Fundacao Privada, que combinam protecao, governanca e eficiencia tributaria.' };
+      if (o === 'o_protecao') return { nome: 'Fundacao Privada', pais: 'Liechtenstein', explicacao: 'A Fundacao Privada em Liechtenstein oferece o mais alto nivel de segregacao patrimonial da Europa. O patrimonio deixa de estar vinculado ao seu CPF e passa a ser gerido por uma estrutura com personalidade juridica propria.' };
+      if (o === 'o_tributario') return { nome: 'Trust + Holding Internacional', pais: 'Cayman + Malta', explicacao: 'A combinacao de Trust em Cayman com Holding em Malta permite consolidar ativos com eficiencia tributaria sobre dividendos e ganhos de capital, aproveitando tratados e regimes especiais.' };
+      return { nome: 'Trust Internacional', pais: 'Ilhas Cayman', explicacao: 'Para patrimonios acima de R$ 10 milhoes com operacao no exterior, o Trust em Cayman centraliza participacoes globais com flexibilidade de governanca e neutralidade fiscal.' };
     }
     if (p === 'p3') {
       if (o === 'o_sucessao') return { nome: 'Holding Internacional + Trust', pais: 'Portugal / Cayman', explicacao: 'A combinacao de Holding com Trust permite consolidar ativos no exterior e definir regras claras de sucessao, evitando ITCMD e inventario.' };
       if (o === 'o_tributario') return { nome: 'Holding Internacional', pais: 'Portugal ou Malta', explicacao: 'Para esse patrimonio com foco tributario, uma Holding Internacional centraliza investimentos e otimiza a carga fiscal sobre dividendos e ganhos de capital.' };
       if (o === 'o_exterior') return { nome: 'Holding Internacional + LLC EUA', pais: 'Portugal + Delaware', explicacao: 'A LLC nos EUA opera no exterior enquanto a Holding consolida participacoes — combinacao ideal para quem fatura ou investe la fora.' };
-      return { nome: 'Holding Internacional', pais: 'Portugal', explicacao: 'Estrutura solida para blindagem patrimonial nessa faixa, com tratado contra bitributacao e protecao contra credores.' };
+      return { nome: 'Holding Internacional', pais: 'Portugal', explicacao: 'Estrutura solida para protecao patrimonial nessa faixa, com tratado contra bitributacao Brasil-Portugal e segregacao de ativos contra credores.' };
     }
     if (p === 'p2') {
       if (o === 'o_sucessao') return { nome: 'Holding em Portugal + estudo de Trust', pais: 'Portugal', explicacao: 'Holding portuguesa estrutura a sucessao com previsibilidade. Para casos complexos, avalia-se Trust como camada adicional.' };
-      if (o === 'o_exterior') return { nome: 'LLC nos EUA', pais: 'Delaware ou Wyoming', explicacao: 'Ideal para receber ou operar no exterior com custos baixos, abertura de conta facilitada e tributacao eficiente para nao-residentes.' };
-      return { nome: 'LLC nos EUA ou Holding em Portugal', pais: 'EUA / Portugal', explicacao: 'Nessa faixa de patrimonio, ambas estruturas funcionam bem para protecao e otimizacao tributaria — a escolha depende do destino dos recursos.' };
+      if (o === 'o_protecao') return { nome: 'Holding em Portugal', pais: 'Portugal', explicacao: 'O tratado Brasil-Portugal permite consolidar ativos em uma Holding com protecao contra credores e sem bitributacao. Estrutura direta para quem quer blindar patrimonio nessa faixa.' };
+      if (o === 'o_tributario') return { nome: 'LLC nos EUA', pais: 'Delaware ou Wyoming', explicacao: 'A LLC americana funciona como pass-through entity — os lucros passam direto para voce sem tributacao corporativa nos EUA. Ideal para otimizar carga fiscal nessa faixa de patrimonio.' };
+      return { nome: 'LLC nos EUA', pais: 'Delaware ou Wyoming', explicacao: 'Ideal para receber ou operar no exterior com custos baixos, abertura de conta facilitada e tributacao eficiente para nao-residentes.' };
     }
-    if (o === 'o_protecao' || o === 'o_sucessao') return { nome: 'LLC nos EUA com planejamento', pais: 'Delaware ou Wyoming', explicacao: 'Estrutura enxuta e de baixo custo, oferece segregacao patrimonial e serve como base para crescimento futuro do planejamento internacional.' };
-    return { nome: 'LLC nos EUA', pais: 'Delaware ou Wyoming', explicacao: 'Ponto de partida ideal: custo baixo, abertura simples e acesso a contas e investimentos globais em dolar.' };
+    if (o === 'o_protecao') return { nome: 'LLC nos EUA com planejamento', pais: 'Delaware ou Wyoming', explicacao: 'Estrutura enxuta e de baixo custo que separa seu patrimonio pessoal dos riscos do negocio. Serve como base para crescimento futuro do planejamento internacional.' };
+    if (o === 'o_sucessao') return { nome: 'LLC nos EUA com planejamento sucessorio', pais: 'Delaware ou Wyoming', explicacao: 'A LLC permite definir regras de transferencia de cotas sem inventario. Para patrimonios ate R$ 500 mil, e o primeiro passo antes de estruturas mais complexas.' };
+    if (o === 'o_tributario') return { nome: 'LLC nos EUA', pais: 'Wyoming', explicacao: 'Wyoming nao cobra imposto estadual sobre LLC de nao-residentes. Estrutura simples, custo baixo e acesso a contas e investimentos em dolar com eficiencia fiscal.' };
+    return { nome: 'LLC nos EUA', pais: 'Delaware ou Wyoming', explicacao: 'Ponto de partida ideal para operar no exterior: abertura em dias, conta bancaria americana, recebimento em dolar e custo de manutencao minimo.' };
   }
 
   document.querySelectorAll('.pills').forEach(function (group) {
