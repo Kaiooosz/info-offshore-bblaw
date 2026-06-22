@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Checkout - Capital Blindado - Bezerra Borges Advogados</title>
+<meta name="author" content="Bezerra Borges Advogados" />
+<meta name="description" content="Adquira o Capital Blindado — guia completo + planilha de simulacao para estruturas internacionais." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #070d0a;
+  color: rgba(255,255,255,0.85);
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page { flex: 1; display: flex; align-items: center; justify-content: center; padding: 2rem 1.25rem; }
+
+.checkout-card {
+  width: 100%;
+  max-width: 28rem;
+}
+
+.logo { display: block; height: 44px; margin: 0 auto 2.5rem; opacity: 0.85; }
+
+.tag {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+}
+
+.title {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  background: linear-gradient(to bottom, #ffffff 0%, #d8d8d8 60%, #b4b4b4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.desc {
+  text-align: center;
+  margin-top: 0.75rem;
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.6;
+}
+
+.separator {
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+  margin: 2rem 0;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+}
+
+.item-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.3);
+}
+.item-icon svg { width: 18px; height: 18px; }
+
+.item-text h4 { font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.8); }
+.item-text p { font-size: 12px; color: rgba(255,255,255,0.3); margin-top: 0.125rem; line-height: 1.5; }
+
+.prices {
+  margin-top: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.875rem;
+}
+.price-old { font-size: 14px; color: rgba(255,255,255,0.2); text-decoration: line-through; }
+.price-new { font-size: 2.25rem; font-weight: 300; color: #fff; letter-spacing: -0.03em; }
+.price-parcela { display: block; text-align: center; margin-top: 0.25rem; font-size: 12px; color: rgba(255,255,255,0.25); }
+
+.hotmart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1.75rem;
+  padding: 1rem;
+  border-radius: 9999px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #070d0a;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.hotmart-btn:hover { opacity: 0.85; }
+
+.trust {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 11px;
+  color: rgba(255,255,255,0.2);
+  line-height: 1.6;
+}
+
+.trust-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.trust-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  color: rgba(255,255,255,0.2);
+}
+.trust-icon svg { width: 20px; height: 20px; }
+.trust-icon span { font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 11px;
+  color: rgba(255,255,255,0.2);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+.back-link:hover { color: rgba(255,255,255,0.4); }
+
+footer {
+  padding: 2rem 1.25rem;
+  text-align: center;
+  font-size: 10px;
+  color: rgba(255,255,255,0.15);
+  letter-spacing: 0.02em;
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="checkout-card">
+
+    <img src="assets/bblaw-branco.svg" alt="Bezerra Borges Advogados" class="logo" />
+
+    <p class="tag">Produto digital</p>
+    <h1 class="title">Capital Blindado</h1>
+    <p class="desc">Guia completo + planilha de simulacao para estruturas internacionais</p>
+
+    <div class="separator"></div>
+
+    <div class="items">
+      <div class="item">
+        <div class="item-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" /></svg>
+        </div>
+        <div class="item-text">
+          <h4>Guia PDF — 8 capitulos</h4>
+          <p>Estruturas, jurisdicoes, obrigacoes legais, checklists e 20 perguntas para o seu advogado</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 0 1-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0 1 12 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 10.875v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125M10.875 12c-.621 0-1.125.504-1.125 1.125M12 12c.621 0 1.125.504 1.125 1.125m0 0v1.5c0 .621-.504 1.125-1.125 1.125m1.125-2.625c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125M10.875 15.75c-.621 0-1.125-.504-1.125-1.125v-1.5c0-.621.504-1.125 1.125-1.125" /></svg>
+        </div>
+        <div class="item-text">
+          <h4>Planilha Excel — Calculadora</h4>
+          <p>ROI, payback e economia estimada com os seus numeros reais em 5 e 10 anos</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="prices">
+      <span class="price-old">R$ 497</span>
+      <span class="price-new">R$ 297</span>
+    </div>
+    <span class="price-parcela">ou ate 12x de R$ 29,39</span>
+
+    <a onclick="return false;" href="https://pay.hotmart.com/K106445776A?checkoutMode=2" class="hotmart-fb hotmart__button-checkout hotmart-btn">Comprar agora</a>
+
+    <div class="trust">
+      <div class="trust-icons">
+        <div class="trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" /></svg>
+          <span>Pagamento seguro</span>
+        </div>
+        <div class="trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
+          <span>Acesso imediato</span>
+        </div>
+        <div class="trust-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182" /></svg>
+          <span>Garantia 7 dias</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="index.html" class="back-link">Voltar para a pagina inicial</a>
+
+  </div>
+</div>
+
+<footer>Bezerra Borges Advogados / Material educacional / Nao substitui consultoria juridica ou tributaria</footer>
+
+<script>
+(function(){
+  var s = document.createElement('script');
+  s.src = 'https://static.hotmart.com/checkout/widget.min.js';
+  document.head.appendChild(s);
+  var l = document.createElement('link');
+  l.rel = 'stylesheet';
+  l.type = 'text/css';
+  l.href = 'https://static.hotmart.com/css/hotmart-fb.min.css';
+  document.head.appendChild(l);
+})();
+</script>
+
+</body>
+</html>
