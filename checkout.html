@@ -128,13 +128,17 @@ body {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   text-decoration: none;
-  color: #070d0a;
-  background: #fff;
-  border: none;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.18);
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
 }
-.hotmart-btn:hover { opacity: 0.85; }
+.hotmart-btn:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.3);
+}
 
 .trust {
   margin-top: 1.5rem;

@@ -300,11 +300,16 @@ body {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   text-decoration: none;
-  color: #070d0a;
-  background: #fff;
-  transition: opacity 0.2s ease;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.18);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
 }
-.cta-btn:hover { opacity: 0.85; }
+.cta-btn:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.3);
+}
 
 .cta-safe { margin-top: 1.25rem; font-size: 11px; color: rgba(255,255,255,0.2); }
 
